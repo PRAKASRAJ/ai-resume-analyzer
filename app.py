@@ -27,7 +27,7 @@ def analyze():
     skills = ["python", "java", "sql", "machine learning"]
     found = [s for s in skills if s in text.lower()]
 
-    return {"skills_found": found}
+    return render_template("result.html", skills=found)
 
 if __name__ == "__main__":
     app.run(host="0.0.0.0", port=10000)
